@@ -27,7 +27,7 @@ def supplement_control_points(control_points: np.ndarray) -> np.ndarray:
 def parse_arguments() -> Dict[str, Any]:
     parser = argparse.ArgumentParser(
         description="Run combined script with specified options",
-        formatter_class=argparse.RawDescriptionHelpFormatter
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument("-input_pdb", type=str, default=None, help="Input PDB file (required if output type is proteinMembrane)")
     parser.add_argument("-x", type=float, default=300.0, help="Simulation box dimension along the X-axis (in Å)")
@@ -52,9 +52,9 @@ def parse_arguments() -> Dict[str, Any]:
     parser.add_argument("-arc", type=float, default=0.2, 
                         help="Arc length interval used for lipid distribution (in Å)")
     parser.add_argument("-nv_l", type=float, default=30.0, 
-                        help="Normal vector field length for the lower leaflet (affects surface sampling density)")
+                        help="Normal vector field length for the lower leaflet (in Å)")
     parser.add_argument("-nv_u", type=float, default=30.0, 
-                        help="Normal vector field length for the upper leaflet (affects surface sampling density)")
+                        help="Normal vector field length for the upper leaflet (in Å)")
 
     args = parser.parse_args()
 
