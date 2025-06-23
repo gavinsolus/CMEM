@@ -1,26 +1,3 @@
-=== Parsed Input Parameters ===
-Input PDB Path: 1xq8_cgout.pdb
-Box Dimensions: X = 300.0, Y = 300.0, Z_u = 100, Z_l = 100
-Control Points: [[  0.     0.  ]
- [ 44.     0.  ]
- [ 44.    37.67]
- [ 88.    37.67]
- [352.    37.  ]
- [616.    37.  ]
- [880.    37.  ]]
-Lipids (Upper Leaflet): {'POPC': 1.0, 'DOPC': 2.0}
-Lipids (Lower Leaflet): {'POPC': 1.0}
-Plasma: 1
-Force Field (ff): martini2
-Output Type (ot): proteinMembrane
-Translation Vector: 0.0
-Arc Curvature: 0.2
-Bin Area (Combined): 0.6
-Bin Area (Upper): 0.6
-Bin Area (Lower): 0.6
-================================
-length_nv_upper: 30.0
-length_nv_lower: 30.0
 POPC 525
 DOPC 1044
 POPC 1457
