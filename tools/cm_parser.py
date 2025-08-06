@@ -16,10 +16,10 @@ def parse_lipid_entry(entry: str) -> Dict[str, float]:
         lipid_dict[key] = value
     return lipid_dict
 
-def supplement_control_points(control_points: np.ndarray) -> np.ndarray:
+def supplement_control_points(control_points: np.ndarray, box_X: float) -> np.ndarray:
     if control_points.shape[0] == 4:
         x, y = control_points[:, 0], control_points[:, 1]
-        x_new = np.linspace(x[3], 10 * x[3], 4)[1:].astype(int)
+        x_new = np.linspace(x[3], 1.43 * box_X, 4)[1:]
         y_new = np.full_like(x_new, y[3])
         return np.vstack((control_points, np.column_stack((x_new, y_new))))
     return control_points
@@ -80,8 +80,7 @@ def parse_arguments() -> Dict[str, Any]:
 def main() -> Dict[str, Any]:
     results = parse_arguments()
     if results["control_points"] is not None:
-        results["control_points"] = supplement_control_points(results["control_points"])
-    
+        results["control_points"] = supplement_control_points(results["control_points"], results["box_X"])
     if results["ot"] == "proteinMembrane" and not results["input_pdb"]:
         raise ValueError("Error: input_pdb must be specified when output type is 'proteinMembrane'.")
 

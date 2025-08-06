@@ -144,3 +144,9 @@ python cmem.py -input_pdb cg_centered.pdb \
 ```
 
 > Adjust `-trans` (e.g., `-trans 10`) to fine-tune the vertical alignment between the protein and membrane surface.
+
+---
+
+## Citation
+
+Guo, J.; Lei, K.; Liu, J.; Tong, H. H.; Luo, Y. L.; Han, W.; Li, S. Cmem Builder: An Automated Tool for Curved Membrane Construction in Molecular Dynamics Simulations. J. Chem. Theory Comput. 2025. https://doi.org/10.1021/acs.jctc.5c00467.
