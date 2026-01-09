@@ -796,7 +796,7 @@ def reorder_lipid(lipids, lipid_list):
     for key in lipid_list:
         new_lipids[key] = []
     for lipid in lipids:
-        lipidname = lipid[2][17:21]
+        lipidname = lipid[2][17:21].strip()
         new_lipids[lipidname].append(lipid)
     for key, value in new_lipids.items():
         print(key, len(value))
